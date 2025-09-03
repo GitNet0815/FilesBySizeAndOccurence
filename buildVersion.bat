@@ -1,0 +1,3 @@
+REM pyinstaller --noconfirm --onefile --console --add-data "assets;assets" --add-data "keepTeamsTray.py;." --hidden-import "PIL._ ImageTk" --hidden-import "PIL._imaging" --name "TeamsCaffeine" --icon "assets/clock_64.ico" keepTeamsTray.py
+
+pyinstaller --noconfirm --onefile --add-data "assets;assets" --add-data "FilesbySizeAndDuplicatesGit.py;." --hidden-import "PIL._ ImageTk" --hidden-import "PIL._imaging" --name "FileInfoHelper" --icon "assets/clock_64.ico" FilesbySizeAndDuplicatesGit.py
