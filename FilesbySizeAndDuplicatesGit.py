@@ -14,9 +14,11 @@ from PySide6.QtWidgets import (
     QMessageBox,
     QProgressBar,
     QTabWidget,
-    QLabel,
     QCheckBox
 )
+# import icon from PySide6.QtGui
+from PySide6.QtGui import QIcon
+
 from PySide6.QtCore import Qt, QThread, Signal
 import sys
 import os
@@ -186,6 +188,8 @@ class MainApp(QTabWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("File Utility")
+        # Set window icon
+        self.setWindowIcon(QIcon("assets/fileutility.ico")) 
 
         from FilesBySizeBar import FileLister
         self.file_lister_tab = FileLister()
@@ -199,6 +203,7 @@ def main():
     app = QApplication(sys.argv)
     window = MainApp()
     window.resize(900, 600)
+    window.setWindowIcon(QIcon("assets/filehelper64.ico"))  # use 32 or 16 as needed
     window.show()
     sys.exit(app.exec())
 
